@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Anime.js</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Dashboard de Animações (Anime.js)</h1>
+
+    <div class="controls">
+      <label>Tipo de Animação:
+        <select id="animationType">
+          <option value="translateX">Movimento X</option>
+          <option value="translateY">Movimento Y</option>
+          <option value="scale">Escala</option>
+          <option value="rotate">Rotação</option>
+          <option value="opacity">Opacidade</option>
+          <option value="backgroundColor">Cor de Fundo</option>
+        </select>
+      </label>
+
+      <label>Valor:
+        <input type="text" id="animationValue" placeholder="Ex: 250, 360deg, 2, #ff0000" />
+      </label>
+
+      <label>Duração (ms):
+        <input type="number" id="duration" value="1000"/>
+      </label>
+
+      <label>Delay (ms):
+        <input type="number" id="delay" value="0"/>
+      </label>
+
+      <label>Easing:
+        <select id="easing">
+          <option value="easeInOutQuad">easeInOutQuad</option>
+          <option value="easeOutBounce">easeOutBounce</option>
+          <option value="linear">linear</option>
+          <option value="easeInElastic">easeInElastic</option>
+        </select>
+      </label>
+
+      <button id="animateBtn">Animar</button>
+      <button id="resetBtn">Reset</button>
+      <button id="exampleBtn">Exemplo</button>
+    </div>
+
+    <div class="preview">
+      <div id="box"></div>
+    </div>
+
+    <div class="code">
+      <h2>Código Anime.js</h2>
+      <pre id="codeOutput">// Código será exibido aqui</pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
